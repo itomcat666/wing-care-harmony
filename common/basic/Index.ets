@@ -1,0 +1,1 @@
+export { instance } from './src/main/ets/utils/Request'

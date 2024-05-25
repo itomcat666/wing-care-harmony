@@ -1,0 +1,146 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/ming_mac/.ohos/config/default_wing_care_hsp_ru5d_kkgLDwg8EGWf_6NX7Z73D7PE67jYk5q-EyZkE4=.cer",
+          "storePassword": "0000001B543C6D047D891EE1C14F057502D8291C6EA0EBA3967BAB6DB242F1BC1858E182B6C916D4422FF2",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BD5657FCE8EDFC8452BEAE1033853BF32D79A70AE37824014C4BB5190B3A10D346B7EC2F92E7F3A",
+          "profile": "/Users/ming_mac/.ohos/config/default_wing_care_hsp_ru5d_kkgLDwg8EGWf_6NX7Z73D7PE67jYk5q-EyZkE4=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/ming_mac/.ohos/config/default_wing_care_hsp_ru5d_kkgLDwg8EGWf_6NX7Z73D7PE67jYk5q-EyZkE4=.p12"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compileSdkVersion": "4.1.0(11)",
+        "compatibleSdkVersion": "4.1.0(11)",
+        "runtimeOS": "HarmonyOS",
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "phone",
+      "srcPath": "./product/phone",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "basic",
+      "srcPath": "./common/basic",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "srcPath": "./features/home",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "duty",
+      "srcPath": "./features/duty",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stage",
+      "srcPath": "./features/stage",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mine",
+      "srcPath": "./features/mine",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "message",
+      "srcPath": "./features/message",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "device",
+      "srcPath": "./features/device",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "public",
+      "srcPath": "./common/public",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}
