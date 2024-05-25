@@ -7,7 +7,6 @@
   "license": "",
   "dependencies": {
     "@hm/basic": "file:../../common/basic",
-    "@hm/public": "file:../../common/public",
     "@ec/home": "file:../../features/home",
     "@ec/duty": "file:../../features/duty",
     "@ec/stage": "file:../../features/stage",

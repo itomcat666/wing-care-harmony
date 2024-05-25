@@ -1,5 +1,4 @@
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
 import dayjs from 'dayjs';
 import { Log } from '@abner/log';
@@ -28,12 +27,12 @@ export default class EntryAbility extends UIAbility {
     // Main window is created, set main page for this ability
     Log.info('Ability onWindowStageCreate')
 
-    windowStage.loadContent('pages/Index', (err) => {
+    windowStage.loadContent('@bundle:com.wxr.elderly/home/ets/pages/SplashPage', (err, data) => {
       if (err.code) {
         Log.error('Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '')
         return;
       }
-      Log.info('Succeeded in loading the content.')
+      Log.info('Succeeded in loading the content. Data: %{public}s ' + JSON.stringify(data) ?? '')
     });
   }
 

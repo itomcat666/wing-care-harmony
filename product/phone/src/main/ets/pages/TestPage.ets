@@ -1,20 +1,29 @@
+import { request } from '@hm/basic'
+import { Log } from '@abner/log'
+
+interface UserData {
+  id: string,
+  username: string,
+  nickName: string,
+  avatar: string | null
+}
+
 @Entry
 @Component
 struct TestPage {
-  @State message: string = 'Hello World';
+  aboutToAppear(): void {
+    this.getUser()
+  }
+
+  async getUser() {
+    const res = await request<UserData>({ url: '/employee/user' })
+    Log.info(res)
+  }
 
   build() {
-    RelativeContainer() {
-      Text(this.message)
-        .id('HelloWorld')
-        .fontSize(50)
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        })
+    Column({ space: 20 }) {
     }
-    .height('100%')
     .width('100%')
+    .alignItems(HorizontalAlign.Center)
   }
 }

@@ -5,13 +5,13 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "certpath": "/Users/ming_mac/.ohos/config/default_wing_care_hsp_ru5d_kkgLDwg8EGWf_6NX7Z73D7PE67jYk5q-EyZkE4=.cer",
-          "storePassword": "0000001B543C6D047D891EE1C14F057502D8291C6EA0EBA3967BAB6DB242F1BC1858E182B6C916D4422FF2",
+          "certpath": "C:\\Users\\ming-desktop\\.ohos\\config\\default_wing-care-harmony_LFFeGmkqOZXVZcXCbNxKQvtkAP6fjZvmoL0KRE4m3hk=.cer",
+          "storePassword": "0000001B5C84E4090AB04FCFBF1AC97A907FF8DCD5D40691C10D51033C147F9BB70AF3E3D444C695CDDA83",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001BD5657FCE8EDFC8452BEAE1033853BF32D79A70AE37824014C4BB5190B3A10D346B7EC2F92E7F3A",
-          "profile": "/Users/ming_mac/.ohos/config/default_wing_care_hsp_ru5d_kkgLDwg8EGWf_6NX7Z73D7PE67jYk5q-EyZkE4=.p7b",
+          "keyPassword": "0000001B8296FAA3B90EF5CCA411FBB5EA9102AC1EA4F79D309E6A156F9F90DFA0D012DE4A803C3B3CF02F",
+          "profile": "C:\\Users\\ming-desktop\\.ohos\\config\\default_wing-care-harmony_LFFeGmkqOZXVZcXCbNxKQvtkAP6fjZvmoL0KRE4m3hk=.p7b",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "/Users/ming_mac/.ohos/config/default_wing_care_hsp_ru5d_kkgLDwg8EGWf_6NX7Z73D7PE67jYk5q-EyZkE4=.p12"
+          "storeFile": "C:\\Users\\ming-desktop\\.ohos\\config\\default_wing-care-harmony_LFFeGmkqOZXVZcXCbNxKQvtkAP6fjZvmoL0KRE4m3hk=.p12"
         }
       }
     ],
@@ -121,18 +121,6 @@
     {
       "name": "device",
       "srcPath": "./features/device",
-      "targets": [
-        {
-          "name": "default",
-          "applyToProducts": [
-            "default"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "public",
-      "srcPath": "./common/public",
       "targets": [
         {
           "name": "default",
