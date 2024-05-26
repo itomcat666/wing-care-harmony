@@ -2,6 +2,7 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 import dayjs from 'dayjs';
 import { Log } from '@abner/log';
+import { RouterConstants } from '@hm/basic/Index';
 
 dayjs.locale('zh-cn')
 
@@ -27,12 +28,12 @@ export default class EntryAbility extends UIAbility {
     // Main window is created, set main page for this ability
     Log.info('Ability onWindowStageCreate')
 
-    windowStage.loadContent('@bundle:com.wxr.elderly/home/ets/pages/SplashPage', (err, data) => {
+    windowStage.loadContent(RouterConstants.SPLASH_URL, (err, data) => {
       if (err.code) {
-        Log.error('Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '')
+        Log.error(`Failed to load the content. Cause: ${JSON.stringify(err) ?? ''}`)
         return;
       }
-      Log.info('Succeeded in loading the content. Data: %{public}s ' + JSON.stringify(data) ?? '')
+      Log.info(`Succeeded in loading the content. Data: ${JSON.stringify(data) ?? ''}`)
     });
   }
 

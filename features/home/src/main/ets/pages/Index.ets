@@ -6,7 +6,7 @@ struct Index {
   build() {
     Row() {
       Column() {
-        Text(this.message)
+        Text('首页')
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
       }

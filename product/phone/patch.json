@@ -1,7 +1,7 @@
 {
   "app": {
     "bundleName": "com.wxr.elderly",
-    "patchVersionCode": 2000002,
+    "patchVersionCode": 2000007,
     "versionCode": 1000000
   },
   "module": {

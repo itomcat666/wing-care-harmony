@@ -1,5 +1,6 @@
 import { Log } from '@abner/log';
 import axios, { AxiosError, AxiosResponse, InternalAxiosRequestConfig, AxiosRequestConfig } from '@ohos/axios'
+import { userStore } from './Auth';
 
 // 创建 axios 实例
 export const instance = axios.create({
@@ -10,9 +11,13 @@ export const instance = axios.create({
 // 添加请求拦截器
 instance.interceptors.request.use((config: InternalAxiosRequestConfig) => {
   // 对请求数据做点什么
-  config.headers.Authorization =
-    'eyJhbGciOiJIUzI1NiJ9.eyJjdXJyZW50VXNlciI6IntcInVzZXJuYW1lXCI6XCIzNTQyMzQ4NEBxcS5jb21cIixcInBhc3N3b3JkXCI6XCJcIixcIm5pY2tOYW1lXCI6XCLmiqTnkIblkZgxXCIsXCJlbWFpbFwiOlwiMzU0MjM0ODRAcXEuY29tXCIsXCJyZWFsTmFtZVwiOlwi5oqk55CG5ZGYMVwiLFwibW9iaWxlXCI6XCIxODIxMTAyMTg5NlwiLFwic2V4XCI6XCIwXCIsXCJkZXB0Tm9cIjpcIjEwMDAwMTAwNTAwMDAwMFwiLFwicG9zdE5vXCI6XCIxMDAwMDEwMDUwMDMwMDBcIixcImRhdGFTdGF0ZVwiOlwiMFwiLFwiYXZhdGFyXCI6XCJodHRwczovL3lqeS1vc3MtdmlkZW9zLm9zcy1hY2NlbGVyYXRlLmFsaXl1bmNzLmNvbS9ncnp4aHouanBnXCIsXCJpZFwiOjE2NzE0MDMyNTY1MTkwNzgyNzUsXCJjcmVhdGVUaW1lXCI6MTcxNTU2ODM5MDAwMCxcInVwZGF0ZVRpbWVcIjoxNzE1NTY4MzkwMDAwLFwiY3JlYXRlQnlcIjoxNjcxNDAzMjU2NTE5MDc4MTM4fSIsImV4cCI6MTQ2NzU2NTk0Nzd9.8PrMKBNrVVCfcI4DgICxp6oBQGqy46m3oglFQCiKtzw'
   Log.info(`1-请求配置${config.method!}-${config.url}:${JSON.stringify(config.params || config.data)}`)
+  // 练习使用
+  // config.headers.Authorization = 'eyJhbGciOiJIUzI1NiJ9.eyJjdXJyZW50VXNlciI6IntcInVzZXJuYW1lXCI6XCJobHpnQHFxLmNvbVwiLFwicGFzc3dvcmRcIjpcIlwiLFwibmlja05hbWVcIjpcIuaKpOeQhue7hOS4u-euoVwiLFwiZW1haWxcIjpcImhsemdAcXEuY29tXCIsXCJyZWFsTmFtZVwiOlwi5oqk55CG57uE5Li7566hXCIsXCJtb2JpbGVcIjpcIlwiLFwic2V4XCI6XCJcIixcImRlcHROb1wiOlwiMTAwMDAxMDA1MDAwMDAwXCIsXCJwb3N0Tm9cIjpcIjEwMDAwMTAwNTAwMjAwMFwiLFwiaWRcIjoxNjY4NTIyMjgwODUxOTUxNjE3LFwiY3JlYXRlVGltZVwiOjE2OTU3MTAwOTcwMDAsXCJ1cGRhdGVUaW1lXCI6MTY5NTcxMDA5NzAwMCxcImNyZWF0ZUJ5XCI6MTY3MTQwMzI1NjUxOTA3ODEzOH0iLCJleHAiOjE0NjY0ODUzMzkyfQ.AwoGeu-mp0QSSsQnDOhQluAPdbFM7Ygll86fk6l3DIA'
+  const store = userStore.getUser()
+  if (store.token) {
+    config.headers.Authorization = store.token
+  }
   return config;
 }, (error: AxiosError) => {
   // 对请求错误做些什么

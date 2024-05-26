@@ -4,7 +4,7 @@ class UserStore {
   KEY = 'user-store'
 
   // 方法
-  getStore() {
+  private getStore() {
     return preferences.getPreferencesSync(getContext(), { name: 'UserStore' })
   }
 
@@ -19,7 +19,7 @@ class UserStore {
   getUser() {
     const store = this.getStore()
     const data = store.getSync(this.KEY, '{}') as string
-    return JSON.parse(data) as string
+    return JSON.parse(data) as User
   }
 
   // 删除用户

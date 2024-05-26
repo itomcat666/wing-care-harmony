@@ -5,13 +5,13 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "certpath": "C:\\Users\\ming-desktop\\.ohos\\config\\default_wing-care-harmony_LFFeGmkqOZXVZcXCbNxKQvtkAP6fjZvmoL0KRE4m3hk=.cer",
-          "storePassword": "0000001B5C84E4090AB04FCFBF1AC97A907FF8DCD5D40691C10D51033C147F9BB70AF3E3D444C695CDDA83",
-          "keyAlias": "debugKey",
-          "keyPassword": "0000001B8296FAA3B90EF5CCA411FBB5EA9102AC1EA4F79D309E6A156F9F90DFA0D012DE4A803C3B3CF02F",
-          "profile": "C:\\Users\\ming-desktop\\.ohos\\config\\default_wing-care-harmony_LFFeGmkqOZXVZcXCbNxKQvtkAP6fjZvmoL0KRE4m3hk=.p7b",
+          "storePassword": "00000018315522A24CFFE7732F4B0902D27BB71014ED688B8B62357284DF98EF77F4E52D827FEE28",
+          "certpath": "/Users/ming_mac/.key/wing-care-debug.cer",
+          "keyAlias": "ming",
+          "keyPassword": "00000018D562AE53BD46F1585ADA469BD282CA91F4016A34508E92FC5C491C54FA5E453F12E64DE4",
+          "profile": "/Users/ming_mac/.key/wing-careDebug.p7b",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "C:\\Users\\ming-desktop\\.ohos\\config\\default_wing-care-harmony_LFFeGmkqOZXVZcXCbNxKQvtkAP6fjZvmoL0KRE4m3hk=.p12"
+          "storeFile": "/Users/ming_mac/.key/wing-c.p12"
         }
       }
     ],

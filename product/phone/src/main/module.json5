@@ -4,6 +4,12 @@
     "type": "entry",
     "description": "$string:module_desc",
     "mainElement": "EntryAbility",
+    "metadata": [
+      {
+        "name": "client_id",
+        "value": "111100279"
+      }
+    ],
     "deviceTypes": [
       "phone",
       "tablet",
@@ -15,6 +21,20 @@
     "requestPermissions": [
       {
         "name": "ohos.permission.INTERNET"
+      },
+      {
+        "name": "ohos.permission.ACCESS_BLUETOOTH",
+        "reason": "$string:app_name",
+        "usedScene": {
+          "abilities": [ "EntryAbility"],
+          "when":"inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.GET_WIFI_INFO"
+      },
+      {
+        "name": "ohos.permission.ACCELEROMETER"
       }
     ],
     "abilities": [
