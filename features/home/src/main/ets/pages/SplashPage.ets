@@ -5,7 +5,7 @@ import { router } from '@kit.ArkUI'
 @Component
 struct SplashPage {
   @StorageProp('bottomHeight') bottomHeight: number = 0
-  @State count: number = 5 // 倒计时
+  @State count: number = 1 // 倒计时
   timerId: number = -1 // 定时器id
 
   aboutToAppear(): void {
@@ -19,7 +19,7 @@ struct SplashPage {
         clearInterval(this.timerId)
         const store = userStore.getUser()
         // 判断是否登录
-        router.replaceUrl({ url: store.token ? 'page/Index' : RouterConstants.LOGIN_URL })
+        router.replaceUrl({ url: store.token ? 'pages/Index' : RouterConstants.LOGIN_URL })
       }
     }, 1000)
   }
