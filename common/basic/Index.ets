@@ -1,3 +1,5 @@
+export { ResourceManager } from './src/main/ets/utils/ResourceManager'
+
 export  { loginApi } from './src/main/ets/api/UserApi'
 
 export { RouterConstants } from './src/main/ets/constants/RouterConstants'
